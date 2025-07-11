@@ -197,3 +197,6 @@ charts/*.tgz
 # local development
 .local/
 local/
+
+# next
+docs/what-next.md
