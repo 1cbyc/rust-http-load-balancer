@@ -1,0 +1,199 @@
+# rust build artifacts
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# rust generated files
+*.pdb
+
+# ide and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+logs/
+log/
+
+# certificates and keys (security)
+certs/
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# configuration files with sensitive data
+config.local.toml
+config.production.toml
+.env
+.env.local
+.env.production
+
+# docker
+.dockerignore
+docker-compose.override.yml
+
+# kubernetes
+*.kubeconfig
+kubeconfig
+
+# monitoring and metrics
+prometheus_data/
+grafana_data/
+*.db
+*.sqlite
+
+# test artifacts
+test-results/
+coverage/
+*.profraw
+
+# temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# backup files
+*.bak
+*.backup
+
+# system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# windows
+*.lnk
+
+# linux
+*~
+
+# macos
+.AppleDouble
+.LSOverride
+
+# node modules (if any frontend tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# python (if any scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# java (if any tools)
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# go (if any tools)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# database files
+*.db
+*.sqlite
+*.sqlite3
+
+# cache directories
+.cache/
+cache/
+
+# build directories
+build/
+dist/
+out/
+
+# coverage reports
+coverage/
+*.lcov
+*.gcov
+
+# profiling data
+*.prof
+*.profdata
+
+# core dumps
+core
+core.*
+
+# crash logs
+crash.log
+crash.log.*
+
+# application specific
+load-balancer.log
+metrics.log
+health-check.log
+
+# docker volumes
+volumes/
+data/
+
+# terraform (if using infrastructure as code)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# ansible (if using configuration management)
+*.retry
+
+# vagrant (if using virtual machines)
+.vagrant/
+
+# packer (if using image building)
+packer_cache/
+
+# cloudformation (if using aws)
+*.template.yaml.bak
+
+# helm (if using kubernetes)
+charts/*.tgz
+
+# local development
+.local/
+local/

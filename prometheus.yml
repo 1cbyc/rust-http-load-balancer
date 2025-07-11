@@ -1,0 +1,32 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+scrape_configs:
+  # Load Balancer Metrics
+  - job_name: 'load-balancer'
+    static_configs:
+      - targets: ['load-balancer:9090']
+    scrape_interval: 5s
+    metrics_path: '/metrics'
+
+  # Backend Services Health Checks
+  - job_name: 'backend-services'
+    static_configs:
+      - targets: 
+        - 'backend-1:80'
+        - 'backend-2:80'
+        - 'backend-3:80'
+    scrape_interval: 10s
+    metrics_path: '/health'
+    scrape_timeout: 5s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093 

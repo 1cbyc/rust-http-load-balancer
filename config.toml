@@ -1,0 +1,45 @@
+[load_balancer]
+bind_address = "0.0.0.0"
+bind_port = 443
+algorithm = "RoundRobin"
+health_check_interval = 30
+connection_timeout = 10
+read_timeout = 30
+write_timeout = 30
+max_connections = 10000
+enable_metrics = true
+metrics_port = 9090
+enable_tls = true
+cert_file = "certs/server.crt"
+key_file = "certs/server.key"
+enable_rate_limiting = true
+rate_limit_per_second = 1000
+enable_sticky_sessions = true
+session_timeout = 3600
+
+[[servers]]
+address = "192.168.1.10"
+port = 8080
+weight = 1
+max_connections = 1000
+timeout = 10
+health_check_path = "/health"
+health_check_interval = 30
+
+[[servers]]
+address = "192.168.1.11"
+port = 8080
+weight = 2
+max_connections = 1500
+timeout = 10
+health_check_path = "/health"
+health_check_interval = 30
+
+[[servers]]
+address = "192.168.1.12"
+port = 8080
+weight = 1
+max_connections = 1000
+timeout = 10
+health_check_path = "/health"
+health_check_interval = 30 
